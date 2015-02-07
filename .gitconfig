@@ -1,0 +1,6 @@
+[color]
+	ui = true
+[user]
+	name = vankobe
+[core]
+	editor = vim
