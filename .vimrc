@@ -43,9 +43,10 @@ NeoBundleCheck
 
 " Personal Settings
 syntax on
-"set expandtab
-"set tabstop=2
-"set shiftwidth=2
+" set tab = 3space
+set noexpandtab
+set tabstop=3
+set shiftwidth=3
 set autoindent
 set hlsearch
 
@@ -60,3 +61,8 @@ endif
 let g:neocomplete#keyword_patterns._ = '\h\w*'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" remove last space
+autocmd BufWritePre * :%s/\s\+$//e
+" Ctrl + G + s + ? = <?php ?>
+autocmd FileType php let b:surround_63 = "<?php \r ?>"
