@@ -1,0 +1,7 @@
+#!/bin/sh
+res=$(git branch -a | grep '^*' | sed "s/.*_\([0-9]*\)/\1/")
+if [ -n "$res" ]; then
+	mv $1 $1.tmp
+	echo "# #$res" > $1
+	cat $1.tmp >> $1
+fi
