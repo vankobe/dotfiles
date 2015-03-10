@@ -6,3 +6,7 @@
 [core]
 	editor = vim
 	pager = less -x3
+[init]
+	templatedir = ~/.git_template
+[pager]
+	grep = false

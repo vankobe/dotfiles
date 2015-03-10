@@ -16,6 +16,7 @@ call neobundle#begin(expand('/Users/vankobe/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
@@ -25,6 +26,8 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'vim-scripts/ruby-matchit'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'vim-ruby/vim-ruby'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -47,6 +50,15 @@ syntax on
 set noexpandtab
 set tabstop=3
 set shiftwidth=3
+if expand("%:t") =~ ".*\.rb"
+  set tabstop=2
+  set shiftwidth=2
+endif
+if expand("%:t") =~ ".*\.py"
+  set tabstop=2
+  set shiftwidth=2
+endif
+
 set autoindent
 set hlsearch
 
