@@ -47,16 +47,13 @@ NeoBundleCheck
 " Personal Settings
 syntax on
 " set tab = 3space
-set noexpandtab
-set tabstop=3
-set shiftwidth=3
-if expand("%:t") =~ ".*\.rb"
-  set tabstop=2
-  set shiftwidth=2
-endif
-if expand("%:t") =~ ".*\.py"
-  set tabstop=2
-  set shiftwidth=2
+set expandtab
+set tabstop=2
+set shiftwidth=2
+if expand("%:t") =~ ".*\.php"
+  set expandtab
+  set tabstop=4
+  set shiftwidth=4
 endif
 
 set autoindent

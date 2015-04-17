@@ -10,3 +10,5 @@
 	templatedir = ~/.git_template
 [pager]
 	grep = false
+[alias]
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
