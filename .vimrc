@@ -28,6 +28,15 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'vim-scripts/ruby-matchit'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'rtakasuke/yanktmp.vim'
+NeoBundle 'toyamarinyon/vim-swift'
+
+" syntax + 自動compile
+NeoBundle 'kchmck/vim-coffee-script'
+" js BDDツール
+NeoBundle 'claco/jasmine.vim'
+" indentの深さに色を付ける
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -71,7 +80,17 @@ let g:neocomplete#keyword_patterns._ = '\h\w*'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
+" yanktmp
+map <silent> sy :call YanktmpYank()<CR>
+map <silent> sp :call YanktmpPaste_p()<CR>
+map <silent> sP :call YanktmpPaste_P()<CR>
+
 " remove last space
 autocmd BufWritePre * :%s/\s\+$//e
 " Ctrl + G + s + ? = <?php ?>
 autocmd FileType php let b:surround_63 = "<?php \r ?>"
+
+" vimにcoffeeファイルタイプを認識させる
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" インデントを設定
+autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
