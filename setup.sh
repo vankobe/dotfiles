@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DOTFILE_DIR=`dirname "$PWD/$0"`
-DOTFILES=( .vimrc .gitconfig .tmux.conf .git_template )
+DOTFILES=( .vimrc .gitconfig .gitconfig.common .gitconfig.user .tmux.conf .git_template )
 
 for file in ${DOTFILES[@]}
 do

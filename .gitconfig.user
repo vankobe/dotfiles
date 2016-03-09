@@ -1,0 +1,14 @@
+[color]
+	ui = true
+[user]
+	name = vankobe
+	email = egami2787@gmail.com
+[core]
+	editor = vim
+	pager = less -x3
+[init]
+	templatedir = ~/.git_template
+[pager]
+	grep = false
+[alias]
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
