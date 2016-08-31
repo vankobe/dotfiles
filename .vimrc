@@ -137,10 +137,10 @@ colorscheme hybrid
 """"""""""""""""""""""""""""""
 
 " タブ文字を CTRL-I で表示し、行末に $ で表示する。（有効:list/無効:nolist）
-set list
+"set list
 
 " タブ文字などの表示の見え方の設定
-set lcs=tab:>.,trail:_,extends:\
+"set lcs=tab:>.,trail:_,extends:\
 
 " SpecialKey see http://rcmdnk.github.io/blog/2014/07/22/computer-vim/#specialkey
 highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
