@@ -143,7 +143,7 @@ colorscheme hybrid
 "set lcs=tab:>.,trail:_,extends:\
 
 " SpecialKey see http://rcmdnk.github.io/blog/2014/07/22/computer-vim/#specialkey
-highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
+"highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
 
 " 全角スペースを表示
 " see http://inari.hatenablog.com/entry/2014/05/05/231307
@@ -340,7 +340,7 @@ set smartindent  " 新しい行を開始したときに、新しい行のイン�
 set tabstop=2 shiftwidth=2 softtabstop=0
 set hlsearch
 
-"if has("autocmd")
+if has("autocmd")
   "ファイルタイプの検索を有効にする
   filetype plugin on
   "そのファイルタイプにあわせたインデントを利用する
@@ -374,7 +374,7 @@ set hlsearch
   autocmd FileType yaml       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType zsh        setlocal sw=4 sts=4 ts=4 et
   autocmd FileType scala      setlocal sw=2 sts=2 ts=2 et
-"endif
+endif
 
 
 """"""""""""""""""""""""""""""
