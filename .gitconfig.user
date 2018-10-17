@@ -6,9 +6,14 @@
 [core]
 	editor = vim
 	pager = less -x3
+  quotepath = false
 [init]
 	templatedir = ~/.git_template
 [pager]
 	grep = false
 [alias]
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  code-review = diff origin/master --color-words
+[fetch]
+  prune = true
+

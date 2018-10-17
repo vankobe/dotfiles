@@ -44,6 +44,7 @@ NeoBundle 'vim-scripts/ruby-matchit'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'VimClojure'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
@@ -131,6 +132,9 @@ set modifiable
 syntax on
 set background=dark
 colorscheme hybrid
+
+" copy buffer増やす
+set viminfo='50,<1000,s100,h
 
 """"""""""""""""""""""""""""""
 " タブ・空白特殊文字表示・見え方など
