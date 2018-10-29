@@ -45,6 +45,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'VimClojure'
+NeoBundle 'w0ng/vim-hybrid'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
